@@ -1,0 +1,11 @@
+.mat-card-image {
+    width: calc(20% + 32px);
+    margin: 20px;
+}
+.img-content{
+    display: flex;
+}
+.img-content img:hover{
+    opacity: 0.6;
+    cursor: pointer;
+}

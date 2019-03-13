@@ -1,0 +1,23 @@
+<p>
+  film-details works!
+  <button (click)="onBack()">Powrót do filmów</button>
+ 
+</p>
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{film.title}}<span>{{film.year}}</span></mat-card-title>
+    <mat-card-subtitle *ngFor="let genres of film.genres ">{{genres}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="{{film.posterurl}}" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <p>
+      {{film.storyline}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+</mat-card>
+

@@ -1,0 +1,33 @@
+<div class="container-fluid">
+  <div class="row my__header">
+    <div class="col">
+      Hello world
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="container content">
+        <div class="row">
+          <!-- nawigacja boczna -->
+          <div class="col-3 nav sidebar">
+              <nav>
+                <ul>
+                    <li><a [routerLink]="['/films']">Lista filmów</a></li>
+                    <li><a [routerLink]="['films/add']">Dodaj film</a></li>
+                    <li><a [routerLink]="['/search']">Wyszukiwarka na YT</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="col">
+              <router-outlet></router-outlet>
+            </div>
+        </div>
+      </div>
+    </div>    
+  </div> 
+  <div class="row my__footer">
+    <div class="col">
+    Hello world
+    </div>
+  </div>
+</div>

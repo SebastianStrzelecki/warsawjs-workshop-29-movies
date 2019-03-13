@@ -1,0 +1,48 @@
+.my__footer, .my__header {
+    color: white;
+    padding: 24px;
+    margin: 0;
+}
+
+.my__header {
+    background-color: darkblue;    
+}
+
+.my__footer {
+    background-color: lightslategray;
+}
+
+.content {
+    background-color: #fff;
+    color: black;
+    font-size: 14px;
+}
+
+.sidebar{
+        width: 100%;
+        justify-content: space-between;
+        align-content: center;
+        text-align: center;
+        z-index: 10;
+        background-color: #1b1d1d;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+        min-height: 100vh;
+        nav{
+            position: sticky;
+            top:20px;
+            ul{
+                list-style: none;
+                li{
+                    padding-top:30px;
+                    text-transform: uppercase;
+                    a{
+                        color:#fff;
+                    }
+                    a:hover{
+                        color:#e6e6e6;
+                    }
+                }
+            }
+        }
+
+}

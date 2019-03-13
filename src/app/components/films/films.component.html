@@ -1,0 +1,37 @@
+<section class="films__list" *ngIf="filteredFilms">
+  <h1>Brak Filmów do wyświetlenia</h1>
+</section>
+
+<h1>
+    {{ title }} 
+ </h1>
+  <section class="films__list" *ngIf="filteredFilms ">
+    <h1>Films</h1>
+    <input [(ngModel)]='listFilter'>
+    <h4>Filtered by: {{ listFilter }}</h4>
+
+    <div *ngFor="let film of filteredFilms ">
+        <div class="blog-item">
+            <div class="blog-thumb">
+                <a href="{{ film.posterurl }}">
+                    <img 
+                      class="films__item films__item_image" 
+                      mat-card-image 
+                      width="150px"
+                      height="auto"
+                      src="{{ film.posterurl }}"></a>
+            </div>
+            <div class="blog-text text-box text-white">
+            <div class="top-meta"> <a href="">{{ film.title |uppercase }}</a></div>
+            <h3>{{ film.genres }}</h3>
+            <p>{{film.storyline}}</p>
+            
+            <a [routerLink]="['/film', film.id]">Details</a>
+            <button mat-flat-button color="primary" (click)="onDelete(film.id)">Usun</button>
+            </div>
+            </div>
+   
+  
+  
+  </div>
+  </section>
